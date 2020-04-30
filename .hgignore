@@ -1,0 +1,10 @@
+syntax: regexp
+~$
+.pyc$
+.bak$
+blog.egg-info/.*
+build/.*
+dist/.*
+env/.*
+.log
+.egg-info

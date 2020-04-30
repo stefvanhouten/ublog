@@ -1,0 +1,12 @@
+[header]
+<div>
+    <section>
+		<h2>Months</h2>
+		<ul>
+			{{ for menuitem in [menuitems] }}
+			{{ inline menuitem.html }}
+			{{ endfor }}
+		</ul>
+	</section>
+</div>
+[footer]

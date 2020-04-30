@@ -1,0 +1,19 @@
+[header]
+<div>
+	<section>
+		<span class="message"><h1>[message]</h1></span>
+		you will be forwarded or click here to go there immediately <a href="[refresh]">[refresh]</a>.
+
+		{{if [article]}}
+			<form id='form' method='post' action="[refresh]" hidden="">
+				<input name='title' value='[article:title]'>
+				<input name='tags' value='[article:tags]'>
+				<input name='content' value='[article:content]'>
+				<script>setTimeout(function() {document.getElementById('form').submit()}, 5000)</script>
+			</form>
+		{{else}}
+			<meta http-equiv="refresh" content="5;url=[refresh]">
+		{{endif}}
+	</section>
+</div>
+[footer]

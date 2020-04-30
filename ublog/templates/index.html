@@ -1,0 +1,26 @@
+[header]       
+	<div>
+    <section>
+    <h1>[blogname]</h1> 
+    {{if [pagination]}}
+      {{for number in [pagination:pagenumbers]}}
+        {{inline pagelink.html}}
+      {{endfor}}
+    {{endif}}
+    {{if [articles] }}
+    <ul id="blogs" class="listNone">
+    {{ for article in [articles] }}
+      {{ inline blogpost.html }}
+    {{ endfor }}
+    </ul>
+    {{ else }}
+    No articles found.
+    {{ endif }}
+    {{if [pagination]}}
+      {{for number in [pagination:pagenumbers]}}
+        {{inline pagelink.html}}
+      {{endfor}}
+    {{endif}}
+    </section>
+  </div>
+[footer]

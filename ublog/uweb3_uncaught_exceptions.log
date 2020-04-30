@@ -1,0 +1,399 @@
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 155, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 167, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext.encode() + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 155, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 167, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    print(plaintext + binascii.hexlify(self['salt']))
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 155, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 167, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    print(binascii.hexlify(self['salt']))
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 155, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 167, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'])).digest()
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).digest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).hexdigest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).hexdigest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 154, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 166, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).hexdigest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 155, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 167, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 96, in VerifyPlaintext
+    print(hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())))
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 157, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 169, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    m.update(plaintext + binascii.hexlify(self['salt']))
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 157, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 169, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    m.update(plaintext + binascii.hexlify(self['salt'].encode()))
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    print(type(plaintext + binascii.hexlify(self['salt'].encode())))
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    print(type(plaintext + binascii.hexlify(self['salt'])))
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    print(binascii.hexlify(self['salt']))
+TypeError: a bytes-like object is required, not 'str'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    print(binascii.hexlify(b"{}".format(self['salt'])))
+AttributeError: 'bytes' object has no attribute 'format'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 100, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).digest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 97, in VerifyPlaintext
+    print(plaintext + binascii.hexlify(self['salt'].encode()))
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 100, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).digest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 158, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 170, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 100, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).digest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 157, in _ULF_Verify
+    return self._ULF_VerifyPlain()
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 169, in _ULF_VerifyPlain
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 99, in VerifyPlaintext
+    salted = hashlib.sha1(plaintext + binascii.hexlify(self['salt'].encode())).digest()
+TypeError: must be str, not bytes
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 167, in AddUser
+    user.UpdatePassword(self.post.getfirst('password'))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 83, in UpdatePassword
+    self.update(self.HashPassword(plaintext))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 72, in HashPassword
+    m.update(password.encode() + binascii.hexlify(salt.encode()))
+AttributeError: 'bytes' object has no attribute 'encode'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 167, in AddUser
+    user.UpdatePassword(self.post.getfirst('password'))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 84, in UpdatePassword
+    self.update(self.HashPassword(plaintext))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 73, in HashPassword
+    m.update(password.encode() + binascii.hexlify(salt.encode()))
+AttributeError: 'bytes' object has no attribute 'encode'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 167, in AddUser
+    user.UpdatePassword(self.post.getfirst('password'))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 84, in UpdatePassword
+    self.update(self.HashPassword(plaintext))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 73, in HashPassword
+    m.update(password.encode() + binascii.hexlify(salt.encode()))
+AttributeError: 'bytes' object has no attribute 'encode'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 167, in AddUser
+    user.UpdatePassword(self.post.getfirst('password'))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 84, in UpdatePassword
+    self.update(self.HashPassword(plaintext))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 73, in HashPassword
+    m.update(password.encode() + binascii.hexlify(salt.encode()))
+AttributeError: 'bytes' object has no attribute 'encode'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 167, in AddUser
+    user.UpdatePassword(self.post.getfirst('password'))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 84, in UpdatePassword
+    self.update(self.HashPassword(plaintext))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 73, in HashPassword
+    m.update(password.encode() + binascii.hexlify(salt.encode()))
+AttributeError: 'bytes' object has no attribute 'encode'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 167, in AddUser
+    user.UpdatePassword(self.post.getfirst('password'))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 84, in UpdatePassword
+    self.update(self.HashPassword(plaintext))
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 73, in HashPassword
+    m.update(password.encode() + binascii.hexlify(salt.encode()))
+AttributeError: 'bytes' object has no attribute 'encode'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 168, in AddUser
+    self._ULF_SetSession(self.ULF_SESSION_NAME, user['ID'], expiry=172800)
+  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 124, in _ULF_SetSession
+    'iplocked': int(locktoip)})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    result = cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/underdark/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/underdark/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'session' at row 1")

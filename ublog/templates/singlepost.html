@@ -1,0 +1,18 @@
+[header]
+<div>
+  <section>
+    <article>
+      <header>
+        <h1><a href="/article/[article:ID]/[article:title|slashfilter|url]">[article:title|creole]</a></h1>
+        <span class="tags">{{for tag in [tags] }}{{ inline posttag.html }}{{ endfor }}</span>
+        <span class="user"><a href="/author/[article:user:ID]/[article:user:author|slashfilter|url]">[article:user:author]</a></span>
+        <time>[article:date]</time>
+      </header>
+      [article:content|creole]
+      {{ if [article:commentable] or [commentslist] }}
+      {{ inline comments.html }}
+      {{ endif }}
+    </article>
+  </section>
+</div>
+[footer]

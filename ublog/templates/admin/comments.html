@@ -1,0 +1,8 @@
+<div>
+	 {{ for comment in [commentslist] }}
+	 {{ inline admin/comment.html }}
+	 {{ endfor }}
+	 {{ if [commentform] }}
+	 {{ inline commentform.html }}
+	 {{ endif }}
+</div>

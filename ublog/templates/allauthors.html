@@ -1,0 +1,13 @@
+[header]
+<div>
+    <section>
+		<h1>Authors</h1>
+		<ul>
+		{{ for user in [users] }}
+		{{ inline menuuser.html }}
+		{{ endfor }}
+		</ul>
+	</section>
+</div>
+
+[footer]

@@ -1,0 +1,9 @@
+<footer>
+	<h2>Comments for [article:title]</h2>
+	 {{ for comment in [commentslist] }}
+	 {{ inline comment.html }}
+	 {{ endfor }}
+	 {{ if [article:commentable] }}
+  {{ inline commentform.html }}
+	 {{ endif }}
+</footer>

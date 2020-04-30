@@ -1,0 +1,60 @@
+[header]
+<div>
+  <section>
+    {{ if [articles] or [unpubarticles] }}
+    <h1>Published articles</h1>
+    {{if [pagination]}}
+      {{for number in [pagination:pagenumbers]}}
+        {{inline pagelink.html}}
+      {{endfor}}
+    {{endif}}
+    <table>
+      {{if [articles] }}
+
+      <thead>
+        <tr><th>Id</th><th>Title</th><th>Author</th><th>Date</th><th>Content</th><th>Comments</th><th colspan="2">Actions</th></tr>
+      </thead>
+      <tbody>
+       {{ for article in [articles] }}
+         {{ inline admin/blogpost.html }}
+       {{ endfor }}
+      </tbody>
+      {{ endif }}
+      </table>
+    {{if [pagination]}}
+      {{for number in [pagination:pagenumbers]}}
+        {{inline pagelink.html}}
+      {{endfor}}
+    {{endif}}
+
+
+    {{ if [unpubarticles] }}
+    <h1>Unpublished articles</h1>
+    {{if [unpubpagination]}}
+      {{for number in [unpubpagination:pagenumbers]}}
+        {{inline unpubpagelink.html}}
+      {{endfor}}
+    {{endif}}
+    <table>
+      
+      <thead>
+        <tr><th>Id</th><th>Title</th><th>Author</th><th>Date</th><th>Content</th><th>Comments</th><th colspan="2">Actions</th></tr>
+      </thead>
+      <tbody>
+       {{ for article in [unpubarticles] }}
+         {{ inline admin/blogpost.html }}
+       {{ endfor }}
+       </tbody>
+       {{ endif }}
+    </table>
+    {{if [unpubpagination]}}
+      {{for number in [unpubpagination:pagenumbers]}}
+        {{inline unpubpagelink.html}}
+      {{endfor}}
+    {{endif}}
+    {{ else }}
+      No articles have been created yet.
+    {{ endif }}
+  </section>
+</div>
+[footer]

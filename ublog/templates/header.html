@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>[blogname] - [page]</title>
+    {{ if [OGdata] }}
+    <!-- open graph metadata -->
+    <meta property="og:title" content="[OGdata:title]" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="[blogurl]/article/[OGdata:ID]" />
+    <meta property="og:image" content="[OGdata:image]" />
+    {{ endif }}
+    <link rel="stylesheet" href="//css.underdark.nl/v0.2/base.css" />
+    <link rel="stylesheet" href="//css.underdark.nl/v0.2/layout.css" />
+    <link rel="stylesheet" href="//css.underdark.nl/v0.2/module.css" />
+    <link rel="stylesheet" href="//underdark.nl/styles/theme.css" />
+    <link rel="stylesheet" href="/styles/default.css" />
+    {{ if [javascripts] }}
+    {{ for script in [javascripts] }}
+    <script type="text/javascript" src="/js/[script]"></script>
+    {{ endfor }}
+    {{ endif }}
+  </head>
+  <body class="index">
+    <header>
+      <div>
+        <div class="logo">
+          <a href="/">[blogtitle]</a>
+          <p>[blogsubtitle]</p>
+        </div>
+        {{ if [page] != 'Login' and not [user] }}
+        {{ inline menulogin.html }}
+        {{ endif }}
+        <nav>
+          <ul>
+            <li><a href="/" class="index">Home</a></li>
+            {{ if [user] and [user:admin] == 'true' }}
+            <li><a href="/admin/newarticle" class="home">New Article</a></li>
+            <li><a href="/admin/users" class="users">Users</a></li>
+            {{ endif }}
+            {{ if not [user] }}
+            <li><a href="/signup">Signup</a></li>
+            {{ endif }}
+            {{ if [user] }}
+            {{ inline logoutbutton.html }}
+            {{ endif }}
+          </ul>
+        </nav>
+        <button class="toggle">Menu</button>
+      </div>
+    </header>
+    <main>
+    {{ if [user] and [user:admin] == 'true' }}
+    {{else}}
+    <nav>
+      <section>
+        <ul class="listNone">
+            {{ if [users] }}
+            {{ inline menuusers.html }}
+            {{ endif }}
+            {{ if [menuitems] }}
+            {{ inline menu.html }}
+            {{ endif }}
+            {{ if [tags] }}
+            {{ inline menutags.html }}
+            {{ endif }}
+        </ul>
+      </section>
+    </nav>
+    {{ endif }}

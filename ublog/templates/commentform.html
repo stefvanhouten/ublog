@@ -1,0 +1,14 @@
+<div>
+  <form action="/addcomment" method="post">
+  <input type="hidden" name="article" value="[article:ID]">
+  <input type="hidden" name="xsrf" value="[xsrftoken]">
+  {{ if not [user] }}
+  <div><label for="user">Your name</label><input type="text" name="user" id='user' maxlength="30"></div>
+  <div><label for="email">Your email</label><input
+  type="text" name="email" id="email"></div>
+  {{ endif }}
+  <div><label for="comment">Your text</label><textarea id="comment" name="comment" rows="8" cols="50"></textarea></div>
+  <p class="message"><a href="http://www.wikicreole.org/">(Use creole to style your comment)</a></p>
+  <input type="submit" value="Submit my comment">
+  </form>
+</div>

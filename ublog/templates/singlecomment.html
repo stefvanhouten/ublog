@@ -1,0 +1,13 @@
+[header]
+<div class="comment">
+	<section>
+		{{ if [user] and [user:admin] == 'true' }}
+  			<a href="/admin/user/[comment:user:ID]/[comment:user:author|slashfilter|url]">[comment:user:author] </a>
+  		{{else}}
+  			[comment:user:author]
+  		{{endif}}
+  		<a href="/comment/[comment:ID]">said on <time> [comment:date]</time></a> 
+		  	[comment:content|creole]
+	</section>
+</div>
+[footer]

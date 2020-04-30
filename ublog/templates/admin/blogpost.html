@@ -1,0 +1,19 @@
+        <tr>
+          <td>[article:ID]</td>
+          <td><a href="/admin/article/[article:ID]/[article:title|slashfilter|url]">[article:title|creole]</a></td>
+          <td><a href="/admin/user/[article:user:ID]/[article:user:author|slashfilter|url]">[article:user:author]</a></td>
+          <td><time>[article:date]</time></td>
+          <td><div>[article:content|creole|indextext]</div></td>
+
+          <td>[article:comments]</td>
+          <td>
+          <input type="button" onclick="document.location='/admin/article/[article:ID]/[article:title|slashfilter|url]';" value="Edit" />
+          </td>
+          <td>
+          <form method="post" action="/admin/deletearticle">
+            <input name='id' value='[article:ID]' hidden="">
+            <input type="hidden" name="xsrf" value="[xsrftoken]">
+            <input type="submit" onclick="return confirm('Are you sure you want to delete this article and all of its comments?')" value="Delete" />
+          </form>
+          </td>
+        </tr>

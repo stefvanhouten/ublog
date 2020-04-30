@@ -1,0 +1,16 @@
+
+<div class="commentBox">
+  <header>
+    <a href="/comment/[comment:ID]">
+      On <time>[comment:date]</time>    
+    </a>
+    <span class="user">
+      {{ if [comment:user:admin] == 'true' }}
+      	<a href="/author/[comment:user:ID]/[comment:user:author|slashfilter|url]">[comment:user:author] </a>
+      {{else}}
+      	[comment:user:author]
+      {{endif}}
+    </span> said:
+  </header>
+  [comment:content|creole]
+</div>

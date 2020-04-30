@@ -1,0 +1,9 @@
+ol.listNone, ul.listNone{
+  list-style-type: none;
+}
+
+.commentBox{
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(229, 229, 229);
+    padding: 16px 32px;
+}

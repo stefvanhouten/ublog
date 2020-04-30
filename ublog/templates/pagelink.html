@@ -1,0 +1,11 @@
+{{if [unpubpagination]}}
+<a href="/page/[number]/[unpubpagination:currentpage]">
+{{else}}
+<a href="/page/[number]">
+{{endif}}
+{{ if [number] == [pagination:currentpage] }}
+	<b>[number]</b>
+{{ else }}
+	[number]
+{{ endif }}
+</a>

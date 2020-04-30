@@ -1,0 +1,13 @@
+[header]
+<div>
+	<section>
+		<h1>Login</h1>
+		<form class="login" action="/ULF-Login" method="post">
+      <input type="hidden" id="xsrf" name="xsrf" value="[xsrftoken]">
+		    <div><label for="secure_user">Emailaddress</label><input type="text" name="username" class="input" id="secure_user" required /></div>
+		    <div><label for="secure_pass">Password</label><input type="password" name="password" class="input" id="secure_pass" required /></div>
+		    <input type="submit" value="Log in" class="button-primary" onclick="LoginDigest();">
+		</form>
+	</section>
+</div>
+[footer]

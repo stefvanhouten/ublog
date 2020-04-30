@@ -1,0 +1,12 @@
+[header]
+<div>
+    <section>
+		<h1>Tags</h1>
+		<ul>
+		{{ for tag in [tags] }}
+		{{ inline menutag.html }}
+		{{ endfor }}
+		</ul>
+	</section>
+</div>
+[footer]

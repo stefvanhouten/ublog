@@ -1,0 +1,39 @@
+[header]
+  <div>
+  <section>
+  <h1>Article Editor</h1>
+  <form class="adminform" action="/admin/updatearticle" method="post">
+    <p><input type="hidden" name="article" value="[article:ID]" /></p>
+      <input type="hidden" name="xsrf" value="[xsrftoken]">
+      <div><label>First published on:</label><span>[article:date]</span></div>
+      <div><label>Author</label><span><a href="/admin/user/[article:user:ID]/[article:user:author|slashfilter|url]">[article:user:author]</a></span></div>
+      <div><label>Normal blog</label><span><a href="/article/[article:ID]/[article:title|slashfilter|url]">See normal blog</a></span></div>
+      <div><label for="title">Title:</label><input id="title" type="text" name="title" value="[article:title]" /></div>
+
+      <div><label for="tags">Tags:</label><input id="tags" type="text" name="tags" value="[tags]" />
+
+      </div>
+        <p class="message">(Use a comma to separate different tags)</p>
+
+
+      <div>
+        <label for="public"><input type="checkbox" id="public" name="public" {{if [article:public]=='true'}} checked{{endif}}>Public</label>
+
+      </div>
+      <div>
+        <label for="commentable"><input type="checkbox" id="commentable" name="commentable"{{if [article:commentable]=='true'}} checked{{endif}}>Comments</label>
+      </div>
+      <div><label for="content">Text:</label><textarea id="content" name="content" rows="8" cols="100">[article:content]</textarea></div>
+      <p class="message"><a href="http://www.wikicreole.org/">(Use creole to style your article)</a></p>
+      <input id="submit" type="submit" value="Save my changes" />
+
+
+  </form>
+
+  {{ if [commentslist] }}
+  <h2>Comments for [article:title]</h2>
+  {{ inline admin/comments.html }}
+  {{ endif }}
+  </section>
+  </div>
+[footer]

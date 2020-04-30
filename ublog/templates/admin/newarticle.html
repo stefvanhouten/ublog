@@ -1,0 +1,28 @@
+[header]
+  <div>
+    <section>
+    <h1>Publish a new article</h1>
+      <form class="adminform" action="/admin/addarticle" method="post">
+          <input type="hidden" name="xsrf" value="[xsrftoken]">
+          <div><label for="title">Title:</label><input id="title" type="text" name="title" value="{{if [article] and [article:title]}}[article:title]{{endif}}" required="" /></div>
+          <div><label for="tags">Tags:</label><input id="tags" type="text" name="tags" value="{{if [article] and [article:tags]}}[article:tags]{{endif}}"/>
+
+          </div>
+
+           <p class="message">(Use a comma to separate different tags)</p>
+
+          <div>
+            <label for="public"><input type="checkbox" id="public" name="public" checked="">Public</label>
+
+          </div>
+          <div>
+            <label for="commentable"><input type="checkbox" id="commentable" name="commentable" checked>Comments</label>
+          </div>
+          <div><label for="content">Text:</label><textarea id="content" name="content" rows="8" cols="100" required="">{{if [article] and [article:content]}}[article:content]{{endif}}</textarea></div>
+          <p class="message"><a href="http://www.wikicreole.org/">(Use creole to style your article)</a></p>
+          <input id="submit" type="submit" value="Submit my article" />
+
+      </form>
+      </section>
+  </div>
+[footer]
