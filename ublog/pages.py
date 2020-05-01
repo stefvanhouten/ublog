@@ -34,8 +34,8 @@ def slashfilter(text):
   return text.replace('/', '&-#')
 
 
-class PageMaker(login.LoginMixin,
-                uweb3.DebuggingPageMaker,
+class PageMaker(uweb3.DebuggingPageMaker,
+                login.LoginMixin,
                 session.SessionMixin,
                 admin.PageMaker):
   """Holds all the html generators for the webapp.
@@ -49,10 +49,10 @@ class PageMaker(login.LoginMixin,
   def __init__(self, *args, **kwds):
     """Overwrites the default init to add extra templateparser functions."""
     super(PageMaker, self).__init__(*args, **kwds)
+    login.LoginMixin.__init__(self)
     self.parser.RegisterFunction("creole", creole2html)
     self.parser.RegisterFunction("indextext", indexText)
     self.parser.RegisterFunction("slashfilter", slashfilter)
-
     if 'xsrf' in self.cookies:
       self.req.AddCookie('xsrf', self.cookies['xsrf'], path='/',
                          max_age=108000)
@@ -75,6 +75,7 @@ class PageMaker(login.LoginMixin,
     """Returns the index.html template."""
     articles = list(model.Article.LastN(self.connection, count=1000))
     pagination = self.MakePagination(int(page), len(articles))
+    print(self.cookiejar)
     if articles:
       articles = articles[10*(pagination['currentpage']-1):
                           10*pagination['currentpage']]
@@ -111,7 +112,7 @@ class PageMaker(login.LoginMixin,
     try:
       self._GetUserLoggedIn()
     except (uweb3.model.NotExistError, self.NoSessionError, TypeError):
-      print("ERROR")
+      print("error")
     else:
       return uweb3.Redirect('/', httpcode=303)
 
@@ -152,8 +153,11 @@ class PageMaker(login.LoginMixin,
       message = 'The Password is too short.'
       return self.RequestMessage(message, 'Error', '/signup')
     if not user:
+      hashed = model.User.HashPassword(self.post.getfirst('password'))
       user = model.User.Create(self.connection, {
           'name': self.post.getfirst('email'),
+          'password': hashed['password'],
+          'salt': hashed['salt'].decode('utf-8'),
           'author': self.post.getfirst('name'),
           'active': 'true',
           'admin': 'false'})
@@ -164,9 +168,7 @@ class PageMaker(login.LoginMixin,
     else:
       message = 'The provided email has already been used.'
       return self.RequestMessage(message, 'Error', '/signup')
-    user.UpdatePassword(self.post.getfirst('password'))
-    self._ULF_SetSession(self.ULF_SESSION_NAME, user['ID'], expiry=172800)
-    message = 'Your account has succesfully been created.'
+    message = 'Your account has successfully been created.'
     return self.RequestMessage(message, 'Success', '/home')
 
   def Article(self, number, title):
@@ -331,31 +333,31 @@ class PageMaker(login.LoginMixin,
       self._GetUserLoggedIn()
     except (uweb3.model.NotExistError, self.NoSessionError):
       return uweb3.Redirect('/login')
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
+    self.Delete('login')
     return self.Index()
 
   @decorators.TemplateParser('message.html', 'Error')
-  def _ULF_Failure(self, secure):
-    message = 'Incorrect username or password.'
+  def _Login_Failure(self):
+    message = 'Incorrect username or password combination.'
     refresh = '/login'
     return {'message': message, 'refresh': refresh, 'article': None}
 
   @decorators.checkxsrf
-  def _ULF_Success(self, secure):
-    email = self.post.getfirst('username')
-    user = model.User.FromEmail(self.connection, email)
-    self._ULF_SetSession(self.ULF_SESSION_NAME, user['ID'], expiry=172800)
+  def _Login_Success(self, user):
+    secure_user = { key : value for key, value in user.items() if key not in ('password', 'salt')}
+
+    self.Create('login',
+                secure_user,
+                max_age='172800')
     message = 'You have been logged in.'
     return self.RequestMessage(message, 'Success', '/home')
 
   def _GetUserLoggedIn(self):
     """Gets the user that is logged in from the current session."""
-    try:
-      print(self.ULF_SESSION_NAME)
-      self.user = self._ULF_GetSession(self.ULF_SESSION_NAME)
-    except Exception:
-      raise self.NoSessionError('security error for session')
-    return self.user
+    self.user = self.cookiejar.get('login')
+    if self.user:
+      return self.user
+    raise self.NoSessionError("security error for session")
 
   def _GetXSRF(self):
     if 'xsrf' in self.cookies:
@@ -418,7 +420,7 @@ class PageMaker(login.LoginMixin,
       first: int of first page, if necessary
       last: int of last page, if necessary
       """
-    totalpages = ((totalcount + (pageposts - 1)) / pageposts)
+    totalpages = int(((totalcount + (pageposts - 1)) / pageposts))
     if totalpages < 1:
       return None
     currentpage = min(max(currentpage, 1), totalpages)

@@ -26,8 +26,8 @@ def main():
   path = os.path.dirname(os.path.abspath(__file__))
   routes = [('/', 'Index'),
             ('/page/(\d+)/?(\d+)?', 'Index'),
-            ('/ULF-Challenge', '_ULF_Challenge'),
-            ('/ULF-Login', '_ULF_Verify'),
+            # ('/ULF-Challenge', '_ULF_Challenge'),
+            ('/ULF-Login', 'ValidateLogin'),
             ('/home', 'Index'),
             ('/login', 'Login'),
             ('/signup', 'Signup'),

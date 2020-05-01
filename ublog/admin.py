@@ -257,6 +257,7 @@ class PageMaker(object):
     article['lastchange'] = now.strftime("%Y-%m-%d %H:%M:%S")
     article.Save()
     model.Tags.removeFromArticle(self.connection, article['ID'])
+    notification = ''
     if self.post.getfirst('tags'):
       notification = self.SaveTags(self.post.getfirst('tags').split(','),
                                    article)

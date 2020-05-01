@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `user` (
    `author` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
    `name` varchar(45) NOT NULL,
    `admin` enum('true','false') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-   `password` varbinary(255),
-   `salt` varbinary(45),
+   `password` varchar(255),
+   `salt` varchar(45),
    `active` enum('true','false') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
    PRIMARY KEY (`ID`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `challenge` (
 --
 
 CREATE TABLE IF NOT EXISTS `session` (
-  `session` binary(16) NOT NULL,
+  `session` binary(100) NOT NULL,
   `remote` varchar(39) COLLATE utf8_unicode_ci NOT NULL,
   `user` smallint(5) unsigned NOT NULL,
   `expiry` datetime NOT NULL,

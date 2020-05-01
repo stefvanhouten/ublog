@@ -301,7 +301,9 @@ class Tags(model.Record):
                             SELECT *
                             FROM tags
                             WHERE name=%s""" % connection.EscapeValues(name))
-    return cls(connection, tag[0])
+    if tag:
+      return cls(connection, tag)
+    raise model.NotExistError(f"There was no tag with name {name}")
 
   @classmethod
   def removeFromArticle(cls, connection, id):
