@@ -478,3 +478,2289 @@ Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 41)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 42)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 321, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 43)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 44)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 45)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 45)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 46)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 231, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 47)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 324, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 236, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 231, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 48)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 324, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 236, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 49)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 326, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 238, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 50)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 51)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    model.Articletags.FromPrimary(self.connection, (tag['ID'],
+TypeError: tuple indices must be integers or slices, not str
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    model.Articletags.FromPrimary(self.connection, (tag['ID'],
+TypeError: tuple indices must be integers or slices, not str
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 54)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 55)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 56)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 57)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 57)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 58)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 58)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 58)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 59)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    raise NotExistError('There is no %r for primary key %r' % (
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._PreCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    ', '.join(map(repr, auto_inc_field))))
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 61)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 62)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 230, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 63)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 323, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 235, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 64)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 65)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 66)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 363, in FromName
+    raise cls.NotExistError('No user with name %r' % username)
+uweb3.model.NotExistError: No user with name 'q'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 68)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 69)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 70)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 365, in FromName
+    return cls(connection, user[0])
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 336, in __init__
+    print(self)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 407, in __str__
+    ', '.join('%r: %r' % item for item in self.items()))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 828, in items
+    return list(self.iteritems())
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 817, in <genexpr>
+    return ((key, self[key]) for key in self)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 684, in __getitem__
+    return self._LoadForeign(field, value)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 726, in _LoadForeign
+    elif field in self._SUBTYPES:
+AttributeError: 'User' object has no attribute '_SUBTYPES'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 71)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 71)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1032, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 72)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1014, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 950, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 365, in FromName
+    return cls(connection, user[0])
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 336, in __init__
+    print(self)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 407, in __str__
+    ', '.join('%r: %r' % item for item in self.items()))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 828, in items
+    return list(self.iteritems())
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 817, in <genexpr>
+    return ((key, self[key]) for key in self)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 684, in __getitem__
+    return self._LoadForeign(field, value)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 726, in _LoadForeign
+    elif field in self._SUBTYPES:
+AttributeError: 'User' object has no attribute '_SUBTYPES'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 52, in ValidateLogin
+    return self._Login_Success(user)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 377, in _Login_Success
+    max_age='172800')
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
+    raise ValueError("Cookie with name already exists")
+ValueError: Cookie with name already exists
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 73)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 73)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1033, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 74)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1015, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 951, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1034, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 75)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1016, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 952, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1034, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 76)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1016, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 952, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1034, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 77)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 322, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 234, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1016, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 952, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")

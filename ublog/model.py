@@ -274,6 +274,7 @@ class Article(model.Record):
 
 class Tags(model.Record):
   """Abstraction class for the tags table."""
+  _PRIMARY_KEY = 'ID'
 
   @classmethod
   def Tagcloud(cls, connection):
@@ -302,9 +303,10 @@ class Tags(model.Record):
       tag = cursor.Execute("""
                             SELECT *
                             FROM tags
-                            WHERE name=%s""" % connection.EscapeValues(name))
+                            WHERE name=%s LIMIT 1""" % connection.EscapeValues(name))
     if tag:
-      return cls(connection, tag)
+      tag = Tags(connection, tag[0])
+      return tag
     raise model.NotExistError(f"There was no tag with name {name}")
 
   @classmethod

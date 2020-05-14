@@ -231,6 +231,7 @@ class PageMaker(object):
           model.Articletags.Create(self.connection,
                                    {'tagid': tag['ID'],
                                     'articleid': article['ID']})
+          pass
       elif len(tag) >= 25:
           notification += (
                    "tag '%s' has been skipped because it was too long" % tag)
