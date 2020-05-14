@@ -1,6 +1,7 @@
 """This file holds all the decorators we use in this project"""
-
 import uweb3
+from uweb3.response import Redirect
+
 
 def adminonly(f):
     """Decorator that checks if the user requesting the page is in fact an
@@ -10,9 +11,9 @@ def adminonly(f):
         user = args[0]._GetUserLoggedIn()
         args[0].user = user
       except (uweb3.model.NotExistError, args[0].NoSessionError):
-        return uweb3.Redirect('/login')
+        return Redirect('/login')
       if user['admin'] != 'true':
-          return uweb3.Redirect('/', httpcode=303)
+          return Redirect('/', httpcode=303)
       return f(*args, **kwargs)
     return wrapper
 
@@ -25,7 +26,7 @@ def loggedin(f):
         user = args[0]._GetUserLoggedIn()
         args[0].user = user
       except (uweb3.model.NotExistError, args[0].NoSessionError):
-        return uweb3.Redirect('/login')
+        return Redirect('/login')
       return f(*args, **kwargs)
     return wrapper
 
@@ -52,8 +53,8 @@ def TemplateParser(template, *t_args, **t_kwargs):
       def wrapper(*args, **kwargs):
         pageresult = f(*args, **kwargs) or {}
         if (
-          (PYTHON_VERSION == 3 and not isinstance(pageresult, (str, uweb3.Response, uweb3.Redirect))) or
-          (PYTHON_VERSION == 2 and not isinstance(pageresult, (str, unicode, uweb3.Response, uweb3.Redirect)))):
+          (PYTHON_VERSION == 3 and not isinstance(pageresult, (str, uweb3.Response, Redirect))) or
+          (PYTHON_VERSION == 2 and not isinstance(pageresult, (str, unicode, uweb3.Response, Redirect)))):
           pageresult.update(args[0].CommonBlocks(*t_args, **t_kwargs))
           return args[0].parser.Parse(template, **pageresult)
         return pageresult

@@ -1,443 +1,214 @@
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 115, in ValidateLogin
-    self.connection, self.post.getfirst('username'))
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 63, in FromName
-    raise cls.NotExistError('No user with name %r' % username)
-uweb3.model.NotExistError: No user with name None
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise NoSessionError("security error for session")
+NameError: name 'NoSessionError' is not defined
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 117, in ValidateLogin
-    return self._Login_Success()
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 219, in _Login_Success
-    raise NotImplementedError
-NotImplementedError
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 119, in ValidateLogin
-    user
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 207, in Create
-    hashed = self.__CreateCookieHash(data)
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 279, in __CreateCookieHash
-    hex_string = pickle.dumps(data).hex()
-TypeError: can't pickle _thread.lock objects
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 119, in ValidateLogin
-    user.copy()
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 207, in Create
-    hashed = self.__CreateCookieHash(data)
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 279, in __CreateCookieHash
-    hex_string = pickle.dumps(data).hex()
-TypeError: can't pickle _thread.lock objects
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 119, in ValidateLogin
-    user.copy()
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 207, in Create
-    hashed = self.__CreateCookieHash(data)
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 279, in __CreateCookieHash
-    hex_string = pickle.dumps(data).hex()
-TypeError: can't pickle _thread.lock objects
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 118, in ValidateLogin
-    user.__dict__
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 207, in Create
-    hashed = self.__CreateCookieHash(data)
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 279, in __CreateCookieHash
-    hex_string = pickle.dumps(data).hex()
-TypeError: can't pickle _thread.lock objects
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/login.py", line 118, in ValidateLogin
-    str(user)
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 203, in Create
-    raise ValueError("Cookie with name already exists")
-ValueError: Cookie with name already exists
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
   File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 51, in _ULF_DeleteSession
-    binsessid = binascii.unhexlify(sessionid)
-binascii.Error: Odd-length string
+    return self.Index()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 360, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 316, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 316, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 77, in Index
-    pagination = self.MakePagination(int(page), len(articles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 442, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 51, in _ULF_DeleteSession
-    binsessid = binascii.unhexlify(sessionid)
-binascii.Error: Odd-length string
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 51, in _ULF_DeleteSession
-    binsessid = binascii.unhexlify(sessionid)
-binascii.Error: Odd-length string
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 51, in _ULF_DeleteSession
-    binsessid = binascii.unhexlify(sessionid)
-binascii.Error: Odd-length string
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 51, in _ULF_DeleteSession
-    binsessid = binascii.unhexlify(sessionid)
-binascii.Error: Odd-length string
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    self._ULF_DeleteSession(self.ULF_SESSION_NAME)
-  File "/home/stef/devel/uweb3/uweb3/pagemaker/session.py", line 51, in _ULF_DeleteSession
-    binsessid = binascii.unhexlify(sessionid)
-binascii.Error: Odd-length string
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 93, in Index
-    unpubpagination = self.MakePagination(int(unpubpage), len(unpubarticles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 436, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 93, in Index
-    unpubpagination = self.MakePagination(int(unpubpage), len(unpubarticles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 436, in MakePagination
-    print(range(1, totalpages + 1))
-TypeError: 'float' object cannot be interpreted as an integer
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 93, in Index
-    unpubpagination = self.MakePagination(int(unpubpage), len(unpubarticles))
-  File "/home/stef/devel/ublog/ublog/pages.py", line 437, in MakePagination
-    pagination['pagenumbers'] = range(1, totalpages + 1)
-TypeError: 'float' object cannot be interpreted as an integer
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 262, in UpdateArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 264, in UpdateArticle
-    message = 'The changes have been saved. %s' % notification
-UnboundLocalError: local variable 'notification' referenced before assignment
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 318, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 319, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 223, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 224, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 317, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 304, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 317, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 305, in FromName
-    return cls(connection, tag[0])
-IndexError: tuple index out of range
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 317, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 225, in SaveTags
-    model.Articletags.FromPrimary(self.connection, (tag['ID'],
-TypeError: 'NoneType' object is not subscriptable
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 317, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 221, in SaveTags
-    tag = model.Tags.FromName(self.connection, tag)
-  File "/home/stef/devel/ublog/ublog/model.py", line 306, in FromName
-    return cls(connection)
-TypeError: __init__() missing 1 required positional argument: 'record'
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 317, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 225, in SaveTags
-    model.Articletags.FromPrimary(self.connection, (tag['ID'],
-  File "/home/stef/devel/uweb3/uweb3/model.py", line 681, in __getitem__
-    value = super(Record, self).__getitem__(field)
-KeyError: 'ID'
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 317, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 225, in SaveTags
-    model.Articletags.FromPrimary(self.connection, (tag['ID'],
-TypeError: 'NoneType' object is not subscriptable
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 246, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 16, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 39, in wrapper
-    return f(*args, **kwargs)
-  File "/home/stef/devel/ublog/ublog/decorators.py", line 53, in wrapper
-    pageresult = f(*args, **kwargs) or {}
-  File "/home/stef/devel/ublog/ublog/admin.py", line 319, in AddArticle
-    article)
-  File "/home/stef/devel/ublog/ublog/admin.py", line 223, in SaveTags
-    tag = model.Tags.Create(self.connection, {'name': tag[:25]})
-TypeError: 'NoneType' object is not subscriptable
+  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
+    user = self._GetUserLoggedIn()
+  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
+    raise self.NoSessionError("security error for session")
+ublog.model.LoginMixin.NoSessionError: security error for session

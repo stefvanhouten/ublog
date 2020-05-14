@@ -2,12 +2,15 @@
 """Html generators for the ublog's admin pages."""
 
 import datetime
-import uweb3
-from . import model
-# from underdark.libs.sqltalk import sqlresult
-from uweb3.ext_lib.underdark.libs.sqltalk import sqlresult
-from . import decorators
 import pymysql
+
+import uweb3
+# from underdark.libs.sqltalk import sqlresult
+from uweb3.ext_lib.libs.sqltalk import sqlresult
+
+from . import decorators, model
+from uweb3.response import Redirect
+
 
 
 class PageMaker(object):
@@ -29,7 +32,7 @@ class PageMaker(object):
     try:
       user = model.User.FromPrimary(self.connection, userid)
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/users', httpcode=303)
+      return Redirect('/users', httpcode=303)
     commentslist = list(user.Comments(self.connection))
     commentpagination = None
     if commentslist:
@@ -52,7 +55,7 @@ class PageMaker(object):
     try:
       articles = list(model.Article.User(self.connection, userid))
     except (uweb3.model.NotExistError, ValueError, TypeError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     articlesPage = articlesPage if articlesPage else 1
     articlePagination = None
     articlePagination = self.MakePagination(int(articlesPage),
@@ -75,12 +78,12 @@ class PageMaker(object):
   def UpdateUser(self):
     """Updates a user's information."""
     if not self.post:
-      return uweb3.Redirect('/admin/users', httpcode=303)
+      return Redirect('/admin/users', httpcode=303)
     try:
       user = model.User.FromPrimary(self.connection,
                                     self.post.getfirst('user'))
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/admin/users', httpcode=303)
+      return Redirect('/admin/users', httpcode=303)
     if self.post.getfirst('name'):
       if len(self.post.getfirst('name')) > 30:
         message = 'The username is too long.'
@@ -112,12 +115,12 @@ class PageMaker(object):
   def UpdateUserPassword(self):
     """Updates a user's password."""
     if not self.post:
-      return uweb3.Redirect('/admin/users', httpcode=303)
+      return Redirect('/admin/users', httpcode=303)
     try:
       user = model.User.FromPrimary(self.connection,
                                     self.post.getfirst('user'))
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/admin/users', httpcode=303)
+      return Redirect('/admin/users', httpcode=303)
     password = self.post.getfirst('password')
     if not password or len(password) <= 5:
       message = 'The Password is too short.'
@@ -135,12 +138,12 @@ class PageMaker(object):
   def DeleteUser(self):
     """Deletes a user."""
     if not self.post:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     userid = self.post.getfirst('id')
     try:
       user = model.User.FromPrimary(self.connection, userid)
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/admin/users', httpcode=303)
+      return Redirect('/admin/users', httpcode=303)
     user.Delete(self.connection)
     message = 'The user has been deleted.'
     refresh = '/admin/users'
@@ -153,12 +156,12 @@ class PageMaker(object):
   def DeleteComment(self):
     """Deletes a comment."""
     if not self.post:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     commentid = self.post.getfirst('id')
     try:
       comment = model.Comment.FromPrimary(self.connection, commentid)
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/admin/users', httpcode=303)
+      return Redirect('/admin/users', httpcode=303)
     comment.Delete()
     message = 'The comment has been deleted.'
     refresh = '/home'
@@ -170,12 +173,12 @@ class PageMaker(object):
   def DeleteArticle(self):
     """Deletes an article."""
     if not self.post:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     articleid = self.post.getfirst('id')
     try:
       article = model.Article.FromPrimary(self.connection, articleid)
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     article.Delete(self.connection)
     message = 'The Article has been deleted.'
     refresh = '/home'
@@ -193,7 +196,7 @@ class PageMaker(object):
         tags.append(tag['name'])
       tags = ', '.join(tags)
     except (uweb3.model.NotExistError, ValueError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     try:
       commentslist = list(article.Comments(self.connection))
       rowtype = True
@@ -239,12 +242,12 @@ class PageMaker(object):
   def UpdateArticle(self):
     """Updates an article's information."""
     if not self.post:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     try:
       article = model.Article.FromPrimary(self.connection,
                                           self.post.getfirst('article'))
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     if self.post.getfirst('title'):
       article['title'] = self.post.getfirst('title')
     if self.post.getfirst('content'):
@@ -289,7 +292,7 @@ class PageMaker(object):
   def AddArticle(self):
     """Adds a new article to the blog."""
     if not self.post:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     for item in ['title', 'content', 'public', 'commentable']:
       if not item:
         message = 'The following item needs to be filled out: %s' % item

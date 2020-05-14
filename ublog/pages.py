@@ -11,6 +11,7 @@ from uweb3.pagemaker import login, session
 from . import admin
 from . import model
 from . import decorators
+from uweb3.response import Redirect
 
 
 def indexText(blogpost):
@@ -35,8 +36,7 @@ def slashfilter(text):
 
 
 class PageMaker(uweb3.DebuggingPageMaker,
-                login.LoginMixin,
-                session.SessionMixin,
+                model.LoginMixin,
                 admin.PageMaker):
   """Holds all the html generators for the webapp.
 
@@ -49,7 +49,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
   def __init__(self, *args, **kwds):
     """Overwrites the default init to add extra templateparser functions."""
     super(PageMaker, self).__init__(*args, **kwds)
-    login.LoginMixin.__init__(self)
+    model.LoginMixin.__init__(self)
     self.parser.RegisterFunction("creole", creole2html)
     self.parser.RegisterFunction("indextext", indexText)
     self.parser.RegisterFunction("slashfilter", slashfilter)
@@ -75,7 +75,6 @@ class PageMaker(uweb3.DebuggingPageMaker,
     """Returns the index.html template."""
     articles = list(model.Article.LastN(self.connection, count=1000))
     pagination = self.MakePagination(int(page), len(articles))
-    print(self.cookiejar)
     if articles:
       articles = articles[10*(pagination['currentpage']-1):
                           10*pagination['currentpage']]
@@ -112,9 +111,9 @@ class PageMaker(uweb3.DebuggingPageMaker,
     try:
       self._GetUserLoggedIn()
     except (uweb3.model.NotExistError, self.NoSessionError, TypeError):
-      print("error")
+      pass
     else:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
 
   @decorators.TemplateParser('signup.html', 'Signup')
   def Signup(self):
@@ -122,9 +121,9 @@ class PageMaker(uweb3.DebuggingPageMaker,
     try:
       self._GetUserLoggedIn()
     except (uweb3.model.NotExistError, self.NoSessionError, TypeError):
-      print("ERROR")
+      pass
     else:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
 
   def RequestMessage(self, message, status, refresh, article=None):
     """Returns the message.html template."""
@@ -137,7 +136,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
     """Adds a new user based on the given input."""
     email = self.post.getfirst('email')
     if not email:
-      return uweb3.Redirect('/signup', httpcode=303)
+      return Redirect('/signup', httpcode=303)
     if len(email) > 200:
         message = 'The email is too long.'
         return self.RequestMessage(message, 'Error', '/home')
@@ -183,7 +182,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
       javascripts = ['validate.js', 'newcomment.js']
       tags = article.Tags()
     except (uweb3.model.NotExistError, ValueError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
 
     first = article['content'].find("{{")
     if first > 0:
@@ -214,7 +213,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
       else:
         articles = list(model.Article.Year(self.connection, year))
     except (uweb3.model.NotExistError, ValueError, TypeError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     title = 'Month: %s %s' % (year, month)
     return self.parser.Parse('articles.html', articles=articles, title=title,
                              **self.CommonBlocks('Month: %s %s' % (month,
@@ -226,7 +225,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
     try:
       articles = list(model.Article.Tag(self.connection, tag))
     except (uweb3.model.NotExistError, ValueError, TypeError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     title = 'Tag: %s' % tag
     return self.parser.Parse('articles.html', articles=articles, title=title,
                              **self.CommonBlocks('Tag: %s' % tag))
@@ -237,7 +236,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
     try:
       articles = list(model.Article.User(self.connection, user))
     except (uweb3.model.NotExistError, ValueError, TypeError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     if author:
       title = 'Author: %s' % author["author"]
       return self.parser.Parse('articles.html', articles=articles, title=title,
@@ -258,7 +257,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
       comment = model.Comment.FromPrimary(self.connection, comment)
       comment['date'] = comment['date'].strftime('%Y-%m-%d %H:%M:%S')
     except (uweb3.model.NotExistError, TypeError):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     return self.parser.Parse('singlecomment.html', comment=comment, user=user,
                              **self.CommonBlocks('Comment # %s'
                                                  % comment['ID']))
@@ -286,12 +285,12 @@ class PageMaker(uweb3.DebuggingPageMaker,
   def AddComment(self):
     """Adds a new comment to an article."""
     if not self.post.getfirst('comment'):
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     try:
       article = model.Article.FromPrimary(self.connection,
                                           self.post.getfirst('article'))
     except uweb3.model.NotExistError:
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     try:
       user = self._GetUserLoggedIn()
     except (uweb3.model.NotExistError, self.NoSessionError, TypeError):
@@ -310,9 +309,9 @@ class PageMaker(uweb3.DebuggingPageMaker,
             'admin': 'false'})
       else:
         if user['active'] == 'true':
-          return uweb3.Redirect('/login', httpcode=303)
+          return Redirect('/login', httpcode=303)
     if article['commentable'] != 'true' and user['admin'] != 'true':
-      return uweb3.Redirect('/', httpcode=303)
+      return Redirect('/', httpcode=303)
     comment = {}
     now = datetime.datetime.now()
     comment['date'] = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -332,7 +331,8 @@ class PageMaker(uweb3.DebuggingPageMaker,
     try:
       self._GetUserLoggedIn()
     except (uweb3.model.NotExistError, self.NoSessionError):
-      return uweb3.Redirect('/login')
+      print("Redirect")
+      return Redirect('/login')
     self.Delete('login')
     return self.Index()
 
@@ -355,6 +355,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
   def _GetUserLoggedIn(self):
     """Gets the user that is logged in from the current session."""
     self.user = self.cookiejar.get('login')
+    print(self.cookiejar)
     if self.user:
       return self.user
     raise self.NoSessionError("security error for session")
