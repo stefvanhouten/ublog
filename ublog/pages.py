@@ -46,11 +46,14 @@ class LoginMixin(uweb3.model.SecureCookie):
 
   @decorators.checkxsrf
   def ValidateLogin(self):
-    user = self.USER.FromName(
-        self.connection, self.post.getfirst('username'))
-    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
-      return self._Login_Success(user)
-    return self._Login_Failure()
+    try:
+      user = self.USER.FromName(
+          self.connection, self.post.getfirst('username'))
+      if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+        return self._Login_Success(user)
+      return self._Login_Failure()
+    except uweb3.model.NotExistError:
+      return self._Login_Failure()
 
   def _Login_Success(self, user):
     """Renders the response to the user upon authentication failure."""

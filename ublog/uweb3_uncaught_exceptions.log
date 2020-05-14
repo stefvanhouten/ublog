@@ -2764,3 +2764,58 @@ Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 364, in FromName
+    raise cls.NotExistError('No user with name %r' % username)
+uweb3.model.NotExistError: No user with name 'q'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 364, in FromName
+    raise cls.NotExistError('No user with name %r' % username)
+uweb3.model.NotExistError: No user with name 'q'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 364, in FromName
+    raise cls.NotExistError('No user with name %r' % username)
+uweb3.model.NotExistError: No user with name 'q'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 364, in FromName
+    raise cls.NotExistError('No user with name %r' % username)
+uweb3.model.NotExistError: No user with name 'q'
+UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
+    return getattr(page_maker, method)(*args)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/pages.py", line 50, in ValidateLogin
+    self.connection, self.post.getfirst('username'))
+  File "/home/stef/devel/ublog/ublog/model.py", line 364, in FromName
+    raise cls.NotExistError('No user with name %r' % username)
+uweb3.model.NotExistError: No user with name 'q'
