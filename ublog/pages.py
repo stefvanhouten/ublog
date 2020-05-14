@@ -7,7 +7,6 @@ import binascii
 import os
 import uweb3
 from creole import creole2html
-from uweb3.pagemaker import login, session
 from . import admin
 from . import model
 from . import decorators
@@ -35,8 +34,35 @@ def slashfilter(text):
   return text.replace('/', '&-#')
 
 
+# ##############################################################################
+# Actual Pagemaker mixin class
+#
+class LoginMixin(uweb3.model.SecureCookie):
+  """Provides the Login Framework for uWeb3."""
+  USER = model.User
+
+  class NoSessionError(Exception):
+    """Custom exception for user not having a (unexpired) session cookie."""
+
+  @decorators.checkxsrf
+  def ValidateLogin(self):
+    user = self.USER.FromName(
+        self.connection, self.post.getfirst('username'))
+    if user.VerifyPlaintext(str(self.post.getfirst('password', ''))):
+      return self._Login_Success(user)
+    return self._Login_Failure()
+
+  def _Login_Success(self, user):
+    """Renders the response to the user upon authentication failure."""
+    raise NotImplementedError
+
+  def _ULF_Success(self, secure):
+    """Renders the response to the user upon authentication success."""
+    raise NotImplementedError
+
+
 class PageMaker(uweb3.DebuggingPageMaker,
-                model.LoginMixin,
+                LoginMixin,
                 admin.PageMaker):
   """Holds all the html generators for the webapp.
 
@@ -49,7 +75,7 @@ class PageMaker(uweb3.DebuggingPageMaker,
   def __init__(self, *args, **kwds):
     """Overwrites the default init to add extra templateparser functions."""
     super(PageMaker, self).__init__(*args, **kwds)
-    model.LoginMixin.__init__(self)
+    LoginMixin.__init__(self)
     self.parser.RegisterFunction("creole", creole2html)
     self.parser.RegisterFunction("indextext", indexText)
     self.parser.RegisterFunction("slashfilter", slashfilter)

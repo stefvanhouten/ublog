@@ -1,214 +1,480 @@
 UNCAUGHT EXCEPTION:
 Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise NoSessionError("security error for session")
-NameError: name 'NoSessionError' is not defined
-UNCAUGHT EXCEPTION:
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 35)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 38)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 38)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 39)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 39)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 39)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 40)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 40)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 40)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
 UNCAUGHT EXCEPTION:
+Traceback (most recent call last):
+  File "/home/stef/devel/ublog/ublog/admin.py", line 229, in SaveTags
+    article['ID']))
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1031, in FromPrimary
+    cls.__name__, pkey_value))
+uweb3.model.NotExistError: There is no 'Articletags' for primary key ('name', 40)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
     return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 336, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 359, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 337, in RequestLogout
-    return self.Index()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 360, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
-UNCAUGHT EXCEPTION:
-Traceback (most recent call last):
-  File "/home/stef/devel/uweb3/uweb3/__init__.py", line 242, in get_response
-    return getattr(page_maker, method)(*args)
-  File "/home/stef/devel/ublog/ublog/pages.py", line 83, in Index
-    user = self._GetUserLoggedIn()
-  File "/home/stef/devel/ublog/ublog/pages.py", line 361, in _GetUserLoggedIn
-    raise self.NoSessionError("security error for session")
-ublog.model.LoginMixin.NoSessionError: security error for session
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 17, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 40, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stef/devel/ublog/ublog/decorators.py", line 54, in wrapper
+    pageresult = f(*args, **kwargs) or {}
+  File "/home/stef/devel/ublog/ublog/admin.py", line 320, in AddArticle
+    article)
+  File "/home/stef/devel/ublog/ublog/admin.py", line 233, in SaveTags
+    'articleid': article['ID']})
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 1013, in Create
+    record._RecordCreate(cursor)
+  File "/home/stef/devel/uweb3/uweb3/model.py", line 949, in _RecordCreate
+    return cursor.Insert(table=self.TableName(), values=values)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 206, in Insert
+    return self._Execute(query)
+  File "/home/stef/devel/uweb3/uweb3/ext_lib/libs/sqltalk/mysql/cursor.py", line 57, in _Execute
+    self.execute(query.strip())
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 514, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 729, in _read_query_result
+    result.read()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 1072, in read
+    first_packet = self.connection._read_packet()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/connections.py", line 681, in _read_packet
+    packet.check_error()
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/stef/devel/uweb3/uweb3-venv/lib/python3.6/site-packages/PyMySQL-0.9.3-py3.6.egg/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect integer value: 'name' for column 'tagid' at row 1")
